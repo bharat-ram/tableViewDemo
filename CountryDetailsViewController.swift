@@ -21,9 +21,12 @@ class CountryDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        <#code#>
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let urlString = "https://en.wikipedia.org/wiki/\(countryName!)"
+        print("URL: \(urlString)")
+    }
     /*
     // MARK: - Navigation
 

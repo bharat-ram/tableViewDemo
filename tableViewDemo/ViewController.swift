@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tableView: UITableView!
     //step 1 for countries
     var countries = [String]()
     //above should be var. if it is let you'll get an error when calling NSArray
@@ -118,8 +119,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
      
         let destination = segue.destination as! CountryDetailsViewController
-            destination.countryName = "Australia"
-        print("Selected Country is: \(destination.countryName)")
+//            destination.countryName = "Australia"
+//        print("Selected Country is: \(destination.countryName)")
+        
+        //step 13 bring lines from step 11 to here
+        let indexPath = tableView.indexPathForSelectedRow!
+        let countryFileName = countries[indexPath.row]
+        let countryName = (countryFileName as NSString).deletingPathExtension
+        destination.countryName = countryName
+        
         
 //        }
     }
