@@ -88,9 +88,8 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x7K-Q0-SRO">
-                                <rect key="frame" x="169" y="283" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x7K-Q0-SRO">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.002876942431" green="1" blue="0.133186517" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                         </subviews>
@@ -102,6 +101,8 @@
                             <constraint firstItem="nD9-UQ-tmN" firstAttribute="trailing" secondItem="CBG-BU-NAv" secondAttribute="trailing" id="fBO-g0-JJW"/>
                             <constraint firstItem="nD9-UQ-tmN" firstAttribute="bottom" secondItem="CBG-BU-NAv" secondAttribute="bottom" id="ofQ-pq-vJX"/>
                             <constraint firstItem="CBG-BU-NAv" firstAttribute="top" secondItem="nD9-UQ-tmN" secondAttribute="top" id="pPE-QE-08y"/>
+                            <constraint firstItem="x7K-Q0-SRO" firstAttribute="centerY" secondItem="6n6-dj-THa" secondAttribute="centerY" id="tMX-2Q-lnB"/>
+                            <constraint firstItem="x7K-Q0-SRO" firstAttribute="centerX" secondItem="6n6-dj-THa" secondAttribute="centerX" id="v4l-uS-FFi"/>
                             <constraint firstItem="CBG-BU-NAv" firstAttribute="leading" secondItem="nD9-UQ-tmN" secondAttribute="leading" id="wEt-mu-KEZ"/>
                             <constraint firstItem="CBG-BU-NAv" firstAttribute="leading" secondItem="nD9-UQ-tmN" secondAttribute="leading" id="y0e-YN-vuS"/>
                         </constraints>
