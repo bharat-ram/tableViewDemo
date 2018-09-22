@@ -298,6 +298,7 @@
 		9DFC86522155D566009AABB8 /* Yemen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC85362155D566009AABB8 /* Yemen.png */; };
 		9DFC86532155D566009AABB8 /* Zambia.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC85372155D566009AABB8 /* Zambia.png */; };
 		9DFC86542155D566009AABB8 /* Zimbabwe.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DFC85382155D566009AABB8 /* Zimbabwe.png */; };
+		9DFC865C2155FFD8009AABB8 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC865B2155FFD8009AABB8 /* CountryDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -615,6 +616,7 @@
 		9DFC85362155D566009AABB8 /* Yemen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yemen.png; sourceTree = "<group>"; };
 		9DFC85372155D566009AABB8 /* Zambia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zambia.png; sourceTree = "<group>"; };
 		9DFC85382155D566009AABB8 /* Zimbabwe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zimbabwe.png; sourceTree = "<group>"; };
+		9DFC865B2155FFD8009AABB8 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -645,6 +647,7 @@
 		9DFC83E22155C0CD009AABB8 = {
 			isa = PBXGroup;
 			children = (
+				9DFC865B2155FFD8009AABB8 /* CountryDetailsViewController.swift */,
 				9DFC841C2155D566009AABB8 /* Flags */,
 				9DFC83ED2155C0CD009AABB8 /* tableViewDemo */,
 				9DFC84022155C0CE009AABB8 /* tableViewDemoTests */,
@@ -1402,6 +1405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DFC83F12155C0CD009AABB8 /* ViewController.swift in Sources */,
+				9DFC865C2155FFD8009AABB8 /* CountryDetailsViewController.swift in Sources */,
 				9DFC83EF2155C0CD009AABB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

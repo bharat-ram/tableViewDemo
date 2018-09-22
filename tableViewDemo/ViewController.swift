@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //step 1 for countries
     var countries = [String]()
     //above should be var. if it is let you'll get an error when calling NSArray
@@ -88,6 +88,40 @@ class ViewController: UIViewController, UITableViewDataSource {
     //to display header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Countries"
+    }
+    
+    //step 10 in countries
+    //to print a log when a country is tapped
+    //click on TableView, connect delegate to view
+
+    //step 11 create a nav control and name the segue as showcountry and write below
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let countryFileName = countries[indexPath.row]
+        let countryName = (countryFileName as NSString).deletingPathExtension
+        print("Selected Country is: \(countryName)")
+        performSegue(withIdentifier: "showCountry", sender: nil)
+    }
+    
+    //step 12 you want to pass the country name to other screen
+    //prepare for segue will be called when user taped on a country (performSegue is called when user tapped on a country). So when
+    //performSegue is called prepare for Segue is called
+    //UIStoryboardSegue is the segue that will be performed
+    
+    //sequence: 1. on story board, create a view controller
+    //2. create a Coca Touch class of type View Controller
+    //3. Inside the class create a string called country name
+    //4. name the view controller class in story board with the name of the cocoa class file
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showCountry" {
+            //a segue connects to view controller. you have a source vc and dest vc. it has to be from source to des
+        
+     
+        let destination = segue.destination as! CountryDetailsViewController
+            destination.countryName = "Australia"
+        print("Selected Country is: \(destination.countryName)")
+        
+//        }
     }
 }
 
