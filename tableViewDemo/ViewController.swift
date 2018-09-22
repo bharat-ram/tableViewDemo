@@ -84,5 +84,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    //step 9 in countries
+    //to display header
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Countries"
+    }
 }
 
