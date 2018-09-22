@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
-class CountryDetailsViewController: UIViewController {
+class CountryDetailsViewController: UIViewController, WKNavigationDelegate {
     var countryName: String!
+    @IBOutlet weak var weView: WKWebView!
+    
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,9 +27,13 @@ class CountryDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let urlString = "https://en.wikipedia.org/wiki/\(countryName!)"
-        print("URL: \(urlString)")
+        let url = URL(string: "https://en.wikipedia.org/wiki/\(countryName!)")!
+//        let urlString = "https://en.wikipedia.org/wiki/\(countryName!)"
+        title = countryName
+//        print("URL: \(urlString)")
+        let request = URLRequest(url: url)
+        weView.navigationDelegate = self
+        weView.load(request)
     }
     /*
     // MARK: - Navigation
@@ -36,5 +44,16 @@ class CountryDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        spinnerView.startAnimating()
 
+
+    }
+
+
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinnerView.stopAnimating()
+
+    }
 }

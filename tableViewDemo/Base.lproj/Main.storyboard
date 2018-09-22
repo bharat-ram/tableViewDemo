@@ -79,9 +79,38 @@
                     <view key="view" contentMode="scaleToFill" id="6n6-dj-THa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-BU-NAv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x7K-Q0-SRO">
+                                <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.002876942431" green="1" blue="0.133186517" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="trailing" secondItem="nD9-UQ-tmN" secondAttribute="trailing" id="GkR-MZ-i0Z"/>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="bottom" secondItem="nD9-UQ-tmN" secondAttribute="bottom" id="MPP-6f-BNn"/>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="top" secondItem="nD9-UQ-tmN" secondAttribute="top" id="Y8E-ef-Ubz"/>
+                            <constraint firstItem="nD9-UQ-tmN" firstAttribute="trailing" secondItem="CBG-BU-NAv" secondAttribute="trailing" id="fBO-g0-JJW"/>
+                            <constraint firstItem="nD9-UQ-tmN" firstAttribute="bottom" secondItem="CBG-BU-NAv" secondAttribute="bottom" id="ofQ-pq-vJX"/>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="top" secondItem="nD9-UQ-tmN" secondAttribute="top" id="pPE-QE-08y"/>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="leading" secondItem="nD9-UQ-tmN" secondAttribute="leading" id="wEt-mu-KEZ"/>
+                            <constraint firstItem="CBG-BU-NAv" firstAttribute="leading" secondItem="nD9-UQ-tmN" secondAttribute="leading" id="y0e-YN-vuS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nD9-UQ-tmN"/>
                     </view>
+                    <connections>
+                        <outlet property="spinnerView" destination="x7K-Q0-SRO" id="mVF-fT-cyI"/>
+                        <outlet property="weView" destination="CBG-BU-NAv" id="H4V-0x-cCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wD7-xH-Uox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

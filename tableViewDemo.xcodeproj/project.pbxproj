@@ -647,7 +647,6 @@
 		9DFC83E22155C0CD009AABB8 = {
 			isa = PBXGroup;
 			children = (
-				9DFC865B2155FFD8009AABB8 /* CountryDetailsViewController.swift */,
 				9DFC841C2155D566009AABB8 /* Flags */,
 				9DFC83ED2155C0CD009AABB8 /* tableViewDemo */,
 				9DFC84022155C0CE009AABB8 /* tableViewDemoTests */,
@@ -672,6 +671,7 @@
 				9DFC83EE2155C0CD009AABB8 /* AppDelegate.swift */,
 				9DFC83F02155C0CD009AABB8 /* ViewController.swift */,
 				9DFC83F22155C0CD009AABB8 /* Main.storyboard */,
+				9DFC865B2155FFD8009AABB8 /* CountryDetailsViewController.swift */,
 				9DFC83F52155C0CE009AABB8 /* Assets.xcassets */,
 				9DFC83F72155C0CE009AABB8 /* LaunchScreen.storyboard */,
 				9DFC83FA2155C0CE009AABB8 /* Info.plist */,
